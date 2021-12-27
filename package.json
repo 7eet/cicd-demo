@@ -1,0 +1,21 @@
+{
+  "name": "myfirstrepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo test command in node app ",
+    "stop": "echo stop command here"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/MyFirstRepo"
+  },
+  "author": "7eet",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  }
+}

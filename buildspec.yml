@@ -1,0 +1,23 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm run test
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - app.js
+    - package.json
+    - scripts/install_dependencies.sh
+    - scripts/start_server.sh
+    - scripts/stop_server.sh
+    - appspec.yml
