@@ -10,7 +10,7 @@ var port = process.env.PORT || 8000;
 var router = express.Router();
 
 router.get("/", function (req, res) {
-  res.status(200).json({ message: "Yeah! welcome to our api!" });
+  res.status(200).json({ message: "Hello! welcome to our api!" });
 });
 
 router.get("/:id", function (req, res) {
