@@ -5,15 +5,15 @@ SERVICEURL=$(aws ssm get-parameters --region ap-south-1 --names /SERVICE/DUMMYUR
 
 length=${#DBNAME}
 
-DBNAME=${DBNAME:1:$(($length-1))}
+DBNAME=${DBNAME:1:$(($length-2))}
 
 length=${#DBPSSWD}
 
-DBPSSWD=${DBPSSWD:1:$(($length-1))}
+DBPSSWD=${DBPSSWD:1:$(($length-2))}
 
 length=${#SERVICEURL}
 
-SERVICEURL=${SERVICEURL:1:$(($length-1))}
+SERVICEURL=${SERVICEURL:1:$(($length-2))}
 
 echo "DBNAME is ${DBNAME}"
 echo "DBPSSWD is ${DBPSSWD}"
