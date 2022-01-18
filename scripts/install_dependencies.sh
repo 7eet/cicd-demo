@@ -20,5 +20,8 @@ echo "DBPSSWD is ${DBPSSWD}"
 echo "SERVICEURL is ${SERVICEURL}"
 
 cd /home/ubuntu
+
+apt install nodejs -y
+apt install npm -y
 npm install pm2 -g
 npm i
