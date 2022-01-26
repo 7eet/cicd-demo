@@ -12,7 +12,7 @@ phases:
       - npm run test
   post_build:
     commands:
-      - aws ec2 run-instances --image-id ami-0851b76e8b1bce90b --count 1 --instance-type t2.medium --key-name ami-docker --security-groups launch-wizard-3 --tag-specifications "ResourceType=instance,Tags=[{Key=BuildKey,Value=One}]" --user-data file://scripts/installCodeDeployAgent.sh
+      - aws ec2 run-instances --image-id ami-0851b76e8b1bce90b --count 1 --instance-type t2.medium --key-name ami-docker --security-groups launch-wizard-3 --tag-specifications "ResourceType=instance,Tags=[{Key=BuildKey,Value=One}]" --iam-instance-profile "Name=Ec2CodeDeployPractice" --user-data file://scripts/installCodeDeployAgent.sh
       - echo Build completed on `date`
 artifacts:
   files:
